@@ -1,0 +1,11 @@
+.carousel-item img {
+    background-position: center;
+    width: 380px;
+    height: 480px;
+    border-radius: 5px;
+}
+
+.carousel {
+    position: relative;
+    width: 500px;
+}
