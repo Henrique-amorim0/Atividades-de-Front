@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Loginha</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    
+    #carouselStacked .carousel-item img {
+      width: 100%;
+      height: clamp(220px, 45vw, 480px);
+      object-fit: contain;
+      background-color: #e9ecef;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Loginha</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Abrir ou fechar menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              Início
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Imagens</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#cards">Cards</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Componentes
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#perguntas">Accordion</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#alertas">Alertas</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#carregamento">
+                  Carregamento
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5 flex-grow-1">
+
+    <header class="text-center mb-5">
+      <h1 class="display-5 fw-bold">Loginha Nerd</h1>
+      <p class="lead">Produtos de Super Herois</p>
+    </header>
+
+    <section id="galeria" class="mb-5" aria-labelledby="tituloGaleria">
+      <div id="carouselStacked" class="carousel slide">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 id="tituloGaleria" class="h4 mb-0">Galeria de imagens</h2>
+
+          <div class="d-flex gap-2">
+            <button
+              class="btn btn-outline-dark btn-sm"
+              type="button"
+              data-bs-target="#carouselStacked"
+              data-bs-slide="prev"
+              aria-label="Imagem anterior"
+            >
+              <span aria-hidden="true">&larr;</span>
+            </button>
+
+            <button
+              class="btn btn-outline-dark btn-sm"
+              type="button"
+              data-bs-target="#carouselStacked"
+              data-bs-slide="next"
+              aria-label="Próxima imagem"
+            >
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-inner rounded-4">
+
+     
+          <div class="carousel-item active">
+            <img
+              src="Imagem/image-removebg-preview (5).png"
+              class="d-block w-100"
+              alt="Descrição da primeira imagem"
+            >
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="Imagem/image-removebg-preview (4).png"
+              class="d-block w-100"
+              alt="Descrição da segunda imagem"
+            >
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="Imagem/image-removebg-preview (3).png"
+              class="d-block w-100"
+              alt="Descrição da terceira imagem"
+            >
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5" aria-labelledby="tituloColunas">
+      <h2 id="tituloColunas" class="h4 mb-3">Sistema de colunas</h2>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="p-3 bg-primary text-white rounded text-center">
+            col-md-4
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 bg-primary text-white rounded text-center">
+            col-md-4
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 bg-primary text-white rounded text-center">
+            col-md-4
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 mt-2">
+        <div class="col-md-8">
+          <div class="p-3 bg-secondary text-white rounded text-center">
+            col-md-8
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 bg-secondary text-white rounded text-center">
+            col-md-4
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cards" class="mb-5" aria-labelledby="tituloCards">
+      <h2 id="tituloCards" class="h4 mb-3">Cards</h2>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title h5">Título do card</h3>
+
+              <p class="card-text">
+                Coloque aqui uma descrição do seu produto ou conteúdo.
+              </p>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exemploModal"
+              >
+                Ver detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100" aria-hidden="true">
+            <div class="card-body">
+              <h3 class="card-title h5 placeholder-wave">
+                <span class="placeholder col-6"></span>
+              </h3>
+
+              <p class="card-text placeholder-wave">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+
+              <span class="btn btn-primary disabled placeholder col-6"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="perguntas" class="mb-5" aria-labelledby="tituloPerguntas">
+      <h2 id="tituloPerguntas" class="h4 mb-3">Accordion</h2>
+
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-sm mb-3"
+        id="btnAccordionToggleAll"
+        aria-controls="resposta1 resposta2 resposta3"
+        aria-expanded="false"
+      >
+        Expandir todos
+      </button>
+
+      <div class="accordion" id="accordionExpandCollapse">
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#resposta1"
+              aria-expanded="true"
+              aria-controls="resposta1"
+            >
+              Item #1
+            </button>
+          </h3>
+
+          <div id="resposta1" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <strong>Conteúdo do primeiro item.</strong>
+              Use o botão “Expandir todos” para abrir todos os itens.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#resposta2"
+              aria-expanded="false"
+              aria-controls="resposta2"
+            >
+              Item #2
+            </button>
+          </h3>
+
+          <div id="resposta2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <strong>Conteúdo do segundo item.</strong>
+              Você pode substituir este texto.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#resposta3"
+              aria-expanded="false"
+              aria-controls="resposta3"
+            >
+              Item #3
+            </button>
+          </h3>
+
+          <div id="resposta3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <strong>Conteúdo do terceiro item.</strong>
+              Cada item também pode ser aberto individualmente.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="componentes" class="mb-5 text-center">
+      <button
+        type="button"
+        class="btn btn-dark"
+        data-bs-toggle="modal"
+        data-bs-target="#exemploModal"
+      >
+        Abrir modal
+      </button>
+    </section>
+
+    <section id="alertas" class="mb-5" aria-labelledby="tituloAlertas">
+      <h2 id="tituloAlertas" class="h4 mb-3">Alertas</h2>
+
+      <div class="alert alert-primary" role="alert">
+        Um exemplo de alerta primário.
+      </div>
+
+      <div class="alert alert-light border" role="alert">
+        Um exemplo de alerta claro.
+      </div>
+
+      <div class="alert alert-success" role="alert">
+        Operação realizada com sucesso!
+      </div>
+
+      <div class="alert alert-danger" role="alert">
+        Ocorreu um erro. Tente novamente.
+      </div>
+
+      <div class="alert alert-warning" role="alert">
+        Atenção! Confira as informações.
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        Uma informação útil para você.
+      </div>
+
+      <div class="alert alert-dark" role="alert">
+        Um exemplo de alerta escuro.
+      </div>
+
+      <div class="alert alert-secondary" role="alert">
+        Um exemplo de alerta secundário.
+      </div>
+    </section>
+
+    <section
+      id="carregamento"
+      class="mb-5"
+      aria-labelledby="tituloCarregamento"
+    >
+      <h2 id="tituloCarregamento" class="h4 mb-3">
+        Exemplos de carregamento
+      </h2>
+
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Carregando...</span>
+        </div>
+
+        <span
+          class="badge text-bg-primary d-inline-flex align-items-center gap-2"
+        >
+          <span
+            class="spinner-border spinner-border-sm"
+            aria-hidden="true"
+          ></span>
+          <span role="status">Carregando...</span>
+        </span>
+
+        <button class="btn btn-primary" type="button" disabled>
+          <span
+            class="spinner-border spinner-border-sm me-1"
+            aria-hidden="true"
+          ></span>
+          <span role="status">Carregando...</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="alert alert-secondary">
+      <strong>Particularidade do Bootstrap:</strong>
+      os componentes já têm visual pronto com as classes.
+      Para personalizar, você pode adicionar CSS ou ajustar as variáveis.
+    </div>
+  </main>
+
+
+  <div
+    class="modal fade"
+    id="exemploModal"
+    tabindex="-1"
+    aria-labelledby="tituloModal"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="tituloModal">Está conecendo a lojinha</h2>
+
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          ></button>
+        </div>
+
+        <div class="modal-body">
+          <p>Gostou da lojinha.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="bg-dark text-white text-center py-3">
+    Demo Bootstrap 5.3
+  </footer>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  
+  <script>
+    const botaoAccordion = document.getElementById("btnAccordionToggleAll");
+
+    const itensAccordion = Array.from(
+      document.querySelectorAll(
+        "#accordionExpandCollapse .accordion-collapse"
+      )
+    );
+
+    function atualizarBotaoAccordion() {
+      const todosAbertos = itensAccordion.every((item) =>
+        item.classList.contains("show")
+      );
+
+      botaoAccordion.textContent = todosAbertos
+        ? "Recolher todos"
+        : "Expandir todos";
+
+      botaoAccordion.setAttribute("aria-expanded", String(todosAbertos));
+
+      botaoAccordion.disabled = itensAccordion.some((item) =>
+        item.classList.contains("collapsing")
+      );
+    }
+
+    botaoAccordion.addEventListener("click", () => {
+      const todosAbertos = itensAccordion.every((item) =>
+        item.classList.contains("show")
+      );
+
+      itensAccordion.forEach((item) => {
+        const instancia = bootstrap.Collapse.getOrCreateInstance(item, {
+          toggle: false
+        });
+
+        if (todosAbertos) {
+          instancia.hide();
+        } else {
+          instancia.show();
+        }
+      });
+
+      atualizarBotaoAccordion();
+    });
+
+    itensAccordion.forEach((item) => {
+      ["show.bs.collapse", "hide.bs.collapse"].forEach((evento) => {
+        item.addEventListener(evento, () => {
+          botaoAccordion.disabled = true;
+        });
+      });
+
+      ["shown.bs.collapse", "hidden.bs.collapse"].forEach((evento) => {
+        item.addEventListener(evento, atualizarBotaoAccordion);
+      });
+    });
+
+    atualizarBotaoAccordion();
+  </script>
+</body>
+</html>
