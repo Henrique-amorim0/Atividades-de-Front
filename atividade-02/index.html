@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Casinhas à Venda: projeto acadêmico de uma imobiliária, desenvolvido com Tailwind CSS.">
+  <title>Casinhas à Venda | Um lugar para chamar de seu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- CSS personalizado: arquivo separado, na mesma pasta do HTML. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-creme focus:p-4">Pular para o conteúdo</a>
+
+  <!-- 1. Menu: links para as seções da própria página. -->
+  <header class="mx-auto max-w-6xl px-6 lg:px-10">
+    <nav aria-label="Menu principal" class="flex flex-wrap items-center justify-between gap-5 border-b border-terra/50 py-6">
+      <a href="#inicio" aria-label="Casinhas à Venda — início" class="font-display text-xl font-semibold tracking-tight">Casinhas<span class="text-telha"> à </span>Venda<span class="text-telha">.</span></a>
+      <ul class="order-3 flex w-full flex-wrap justify-center gap-x-7 gap-y-3 text-sm md:order-none md:w-auto">
+        <li><a class="underline-offset-4 hover:underline" href="#sobre">Como funciona</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="#casas">Nossas casas</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="#depoimento">Depoimento</a></li>
+      </ul>
+      <a href="#contato" class="bg-floresta px-4 py-3 text-xs font-semibold text-creme transition-colors hover:bg-tinta sm:text-sm">Vamos conversar <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- 2. Hero: apresentação da imobiliária fictícia. -->
+    <section id="inicio" aria-labelledby="titulo-inicio" class="mx-auto grid max-w-6xl items-center gap-10 px-6 py-14 md:grid-cols-2 md:gap-12 md:py-20 lg:px-10">
+      <div>
+        <p class="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-telha">Novos endereços. Novas histórias.</p>
+        <h1 id="titulo-inicio" class="max-w-lg font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">Um lugar para<br>chamar <em class="font-normal text-floresta">de seu.</em></h1>
+        <p class="mt-6 max-w-md text-base leading-relaxed text-tinta/80">Uma varanda para desacelerar. Um jardim para ver crescer. Encontre a casa que combina com a vida que você quer construir.</p>
+        <a href="#casas" class="mt-8 inline-flex items-center gap-8 border border-floresta px-6 py-3 text-sm font-semibold text-floresta transition-colors hover:bg-floresta hover:text-creme">Conheça as casas <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure>
+        <!-- O nome da pasta é imagem. Respeite as maiúsculas dos arquivos. -->
+        <img src="imagem/casa1.jpg" alt="Casa térrea branca com varanda, telhado de madeira e amplo jardim" width="1536" height="1024" fetchpriority="high" class="aspect-[5/4] w-full object-cover">
+        <figcaption class="flex items-center justify-between gap-4 border-b border-terra/50 py-4 text-xs">
+          <span><span class="mr-2 text-telha">01 /</span> Casa da Varanda</span>
+          <span class="text-tinta/65">Espaço para viver com calma</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 3. Sobre: quatro etapas, como solicitado no exercício. -->
+    <section id="sobre" aria-labelledby="titulo-sobre" class="bg-areia">
+      <div class="mx-auto max-w-6xl px-6 py-14 lg:px-10">
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-telha">Como funciona</p>
+        <h2 id="titulo-sobre" class="font-display text-3xl sm:text-4xl">Seu próximo lar, em quatro etapas.</h2>
+        <p class="mt-4 max-w-2xl text-sm leading-relaxed text-tinta/75">Na Casinhas à Venda, a busca começa com o que importa para você. Veja como seria essa jornada com a nossa imobiliária.</p>
+        <ol class="mt-9 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+          <li class="border-l border-terra/60 pl-5 lg:pr-6">
+            <span class="font-display text-3xl text-telha">01</span>
+            <h3 class="mt-3 font-display text-xl font-medium">Descobrir</h3>
+            <p class="mt-2 text-sm leading-relaxed text-tinta/75">Conte como é a casa dos seus sonhos: espaços, estilo e planos para o futuro.</p>
+          </li>
+          <li class="border-l border-terra/60 pl-5 lg:pr-6">
+            <span class="font-display text-3xl text-telha">02</span>
+            <h3 class="mt-3 font-display text-xl font-medium">Conhecer</h3>
+            <p class="mt-2 text-sm leading-relaxed text-tinta/75">Explore as opções e escolha quais casas gostaria de conhecer de perto.</p>
+          </li>
+          <li class="border-l border-terra/60 pl-5 lg:pr-6">
+            <span class="font-display text-3xl text-telha">03</span>
+            <h3 class="mt-3 font-display text-xl font-medium">Planejar</h3>
+            <p class="mt-2 text-sm leading-relaxed text-tinta/75">Converse sobre os detalhes do imóvel e organize os próximos passos da compra.</p>
+          </li>
+          <li class="border-l border-terra/60 pl-5">
+            <span class="font-display text-3xl text-telha">04</span>
+            <h3 class="mt-3 font-display text-xl font-medium">Morar</h3>
+            <p class="mt-2 text-sm leading-relaxed text-tinta/75">Com tudo combinado, é hora de receber as chaves e começar uma nova história.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. Galeria: grid assimétrico no computador e uma coluna no celular. -->
+    <section id="casas" aria-labelledby="titulo-casas" class="mx-auto max-w-6xl px-6 py-14 md:py-20 lg:px-10">
+      <div class="mb-7 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-telha">Encontre o seu lugar</p>
+          <h2 id="titulo-casas" class="font-display text-3xl sm:text-4xl">Casas para uma nova história.</h2>
+        </div>
+        <p class="text-xs text-tinta/65">04 imóveis ilustrativos · Valores fictícios</p>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[260px_260px]">
+        <button type="button" data-casa="1" aria-label="Ver detalhes da Casa da Varanda" class="group relative min-h-80 overflow-hidden bg-areia text-left lg:col-span-2 lg:row-span-2">
+          <img src="imagem/casa1.jpg" alt="Casa da Varanda, com fachada branca, madeira e gramado" width="1536" height="1024" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-105">
+          <span class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></span>
+          <span class="absolute left-5 top-5 bg-creme px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider">Casa 01</span>
+          <span class="absolute inset-x-0 bottom-0 p-6 text-white"><span class="block font-display text-3xl">Casa da Varanda</span><span class="mt-2 block text-sm text-white/85">3 quartos · 160 m²</span><span class="mt-4 flex items-center justify-between gap-2 text-lg font-semibold"><span>R$ 580.000</span><span aria-hidden="true">↗</span></span><span class="mt-2 block text-xs underline underline-offset-4">Ver detalhes</span></span>
+        </button>
+        <button type="button" data-casa="2" aria-label="Ver detalhes da Casa Horizonte" class="group relative min-h-72 overflow-hidden bg-areia text-left lg:min-h-0">
+          <img src="imagem/casa2.jpg" alt="Casa Horizonte, térrea, com fachada clara e garagem coberta" width="548" height="364" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-105">
+          <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></span>
+          <span class="absolute left-4 top-4 bg-creme px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider">Casa 02</span>
+          <span class="absolute inset-x-0 bottom-0 p-5 text-white"><span class="block font-display text-2xl">Casa Horizonte</span><span class="mt-1 block text-xs text-white/85">3 quartos · 140 m²</span><span class="mt-3 flex items-center justify-between text-sm font-semibold"><span>R$ 620.000</span><span aria-hidden="true">↗</span></span><span class="mt-2 block text-xs underline underline-offset-4">Ver detalhes</span></span>
+        </button>
+        <button type="button" data-casa="3" aria-label="Ver detalhes do Sobrado Jardim" class="group relative min-h-72 overflow-hidden bg-areia text-left lg:min-h-0">
+          <img src="imagem/casa3.jpg" alt="Sobrado Jardim, com varanda de vidro, fachada em tons terrosos e paisagismo" width="1080" height="964" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-105">
+          <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></span>
+
+          <span class="absolute left-4 top-4 bg-creme px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider">Casa 03</span>
+
+          <span class="absolute inset-x-0 bottom-0 p-5 text-white"><span class="block font-display text-2xl">Sobrado Jardim</span>
+          <span class="mt-1 block text-xs text-white/85">4 quartos · 240 m²</span>
+          <span class="mt-3 flex items-center justify-between text-sm font-semibold">
+            <span>R$ 950.000</span><span aria-hidden="true">↗</span></span>
+            <span class="mt-2 block text-xs underline underline-offset-4">Ver detalhes</span>
+          </span>
+        </button>
+        <button type="button" data-casa="4" aria-label="Ver detalhes da Casa do Entardecer" class="group relative min-h-72 overflow-hidden bg-areia text-left lg:col-span-2 lg:min-h-0">
+          <!-- Atenção: este arquivo tem C maiúsculo: Casa4.jpg. -->
+          
+          <img src="imagem/Casa4.jpg" alt="Casa do Entardecer, sobrado com varanda, jardim e janelas iluminadas" width="800" height="534" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 motion-safe:group-hover:scale-105">
+
+          <span class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></span>
+
+          <span class="absolute left-4 top-4 bg-creme px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider">Casa 04</span>
+
+          <span class="absolute inset-x-0 bottom-0 p-5 text-white"><span class="block font-display text-2xl">Casa do Entardecer</span>
+
+          <span class="mt-1 block text-xs text-white/85">4 quartos · 280 m²</span>
+          <span class="mt-3 flex items-center justify-between text-sm font-semibold">
+            <span>R$ 1.180.000</span>
+            <span aria-hidden="true">
+              <span class="mt-2 block text-xs underline underline-offset-4">Ver detalhes</span>
+            </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 5. Depoimento fictício, identificado como exemplo acadêmico. -->
+    <section id="depoimento" aria-labelledby="titulo-depoimento" class="border-t border-terra/50">
+      <div class="mx-auto max-w-6xl px-6 py-14 lg:px-10">
+        <h2 id="titulo-depoimento" class="mb-7 text-xs font-semibold uppercase tracking-[0.18em] text-telha">Histórias que começam em casa</h2>
+        <figure class="max-w-3xl border-l-2 border-telha pl-6 sm:pl-8">
+          <blockquote class="font-display text-2xl italic leading-relaxed sm:text-3xl">“Queríamos mais que uma casa bonita: um lugar para reunir a família. Quando vimos a varanda, imaginamos todos os nossos domingos ali.”</blockquote>
+          <figcaption class="mt-5 text-sm"><span class="font-semibold">Marina e Rafael</span><span class="text-tinta/65"> — depoimento fictício para este projeto</span></figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. Rodapé: dados fictícios, sem envio de mensagens ou agendamentos. -->
+  <footer id="contato" class="bg-floresta text-creme">
+    <div class="mx-auto max-w-6xl px-6 py-12 lg:px-10">
+      <div class="flex flex-wrap items-start justify-between gap-5">
+        <h2 class="max-w-md font-display text-3xl sm:text-4xl">Vamos encontrar<br>o seu próximo endereço?</h2>
+        <a href="#inicio" class="border-b border-creme/50 pb-1 text-sm hover:text-white">Voltar ao início <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="mt-10 grid gap-7 text-sm sm:grid-cols-3">
+        <div><h3 class="mb-3 text-[11px] uppercase tracking-[0.16em] text-creme/65">Nosso endereço</h3><p>Rua dos Sonhos, 123<br>Jardim Esperança · São Paulo</p></div>
+        <div><h3 class="mb-3 text-[11px] uppercase tracking-[0.16em] text-creme/65">Horário de atendimento</h3><p>Segunda a sexta, das 9h às 18h<br>Sábado, das 9h às 13h</p></div>
+        <div><h3 class="mb-3 text-[11px] uppercase tracking-[0.16em] text-creme/65">Contato ilustrativo</h3><p>(11) 00000-0000<br><span class="break-all">casinhasavenda@gmail.com</span></p></div>
+      </div>
+      <div class="mt-10 flex flex-wrap justify-between gap-3 border-t border-creme/25 pt-5 text-xs leading-relaxed text-creme/65">
+        <p>© 2026 Casinhas à Venda · Atividade 2 — Tailwind CSS.</p>
+        <p>Projeto acadêmico. Anúncios e contatos fictícios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Detalhes: janela nativa do HTML, estilizada com Tailwind. -->
+  <dialog id="detalhes" aria-labelledby="titulo-detalhes" aria-describedby="texto-detalhes" class="fixed inset-0 m-auto max-h-[90dvh] w-[calc(100%_-_2rem)] max-w-xl overflow-y-auto bg-creme p-0 text-tinta shadow-2xl">
+    <div class="flex items-center justify-between gap-4 p-5">
+      <p class="text-xs font-semibold uppercase tracking-widest text-telha">Conheça a casa</p>
+      <form method="dialog"><button autofocus aria-label="Fechar detalhes" class="px-3 py-2 text-xl hover:bg-areia">×</button></form>
+    </div>
+    <img id="imagem-detalhes" alt="" class="aspect-[16/10] w-full object-cover">
+    <div class="p-6 sm:p-8">
+      <h2 id="titulo-detalhes" class="font-display text-3xl"></h2>
+      <p id="info-detalhes" class="mt-3 text-sm text-tinta/75"></p>
+      <p id="preco-detalhes" class="mt-4 text-2xl font-semibold text-floresta"></p>
+      <p id="texto-detalhes" class="mt-4 text-sm leading-relaxed"></p>
+      <p class="mt-4 text-xs text-tinta/65">Imóvel ilustrativo. Preço e características são fictícios.</p>
+      <a id="contato-detalhes" href="#contato" class="mt-6 inline-block bg-floresta px-5 py-3 text-sm font-semibold text-creme hover:bg-tinta">Ver informações de contato <span aria-hidden="true">↗</span></a>
+    </div>
+  </dialog>
+
+  <script>
+    // Dados de exemplo. Edite aqui os textos exibidos ao clicar em cada casa.
+    const casas = {
+      1: { nome: 'Casa da Varanda', imagem: 'imagem/casa1.jpg', info: '3 quartos · 160 m² · 2 vagas', preco: 'R$ 580.000', texto: 'Uma casa térrea com varanda de madeira e jardim. Um convite para aproveitar os dias ao ar livre e os encontros em família.' },
+      2: { nome: 'Casa Horizonte', imagem: 'imagem/casa2.jpg', info: '3 quartos · 140 m² · 2 vagas', preco: 'R$ 620.000', texto: 'Linhas contemporâneas, fachada clara e garagem coberta. Uma proposta para quem procura praticidade e espaços acolhedores.' },
+      3: { nome: 'Sobrado Jardim', imagem: 'imagem/casa3.jpg', info: '4 quartos · 240 m² · 2 vagas', preco: 'R$ 950.000', texto: 'Um sobrado com varanda de vidro, tons terrosos e paisagismo na entrada. Espaço para reunir as pessoas que fazem parte da sua história.' },
+      4: { nome: 'Casa do Entardecer', imagem: 'imagem/Casa4.jpg', info: '4 quartos · 280 m² · 2 vagas', preco: 'R$ 1.180.000', texto: 'Jardim, varanda no andar superior e uma fachada que ganha destaque ao entardecer. Um cenário para imaginar novos começos.' }
+    };
+    const dialogo = document.getElementById('detalhes');
+    document.querySelectorAll('[data-casa]').forEach((botao) => {
+      botao.addEventListener('click', () => {
+        const casa = casas[botao.dataset.casa];
+        document.getElementById('titulo-detalhes').textContent = casa.nome;
+        document.getElementById('info-detalhes').textContent = casa.info;
+        document.getElementById('preco-detalhes').textContent = casa.preco;
+        document.getElementById('texto-detalhes').textContent = casa.texto;
+        const imagem = document.getElementById('imagem-detalhes');
+        imagem.src = casa.imagem;
+        imagem.alt = document.querySelector('[data-casa="' + botao.dataset.casa + '"] img').alt;
+        dialogo.showModal();
+      });
+    });
+    // O botão × e a tecla Escape fecham a janela. O link leva ao rodapé.
+    document.getElementById('contato-detalhes').addEventListener('click', () => {
+      dialogo.close();
+      const contato = document.getElementById('contato');
+      contato.setAttribute('tabindex', '-1');
+      contato.focus({ preventScroll: true });
+    });
+  </script>
+</body>
+</html>

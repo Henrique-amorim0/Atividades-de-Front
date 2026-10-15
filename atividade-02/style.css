@@ -1,0 +1,153 @@
+/* Casinhas à Venda — CSS personalizado da Atividade 2.
+   O Tailwind cuida das classes de layout e espaçamento no HTML. */
+
+@layer theme, base, components, utilities;
+
+/* 1. Paleta e fontes: altere aqui para personalizar o site.
+   As cores usam valores RGB para permitir transparência. */
+:root {
+  --floresta: 27 67 50;   /* #1B4332 */
+  --creme: 239 231 214;  /* #EFE7D6 */
+  --tinta: 42 36 28;     /* #2A241C */
+  --telha: 154 51 36;    /* #9A3324 */
+  --terra: 169 137 95;   /* #A9895F */
+  --areia: 227 218 194;  /* #E3DAC2 */
+  --fonte-texto: 'Work Sans', sans-serif;
+  --fonte-titulo: 'Fraunces', serif;
+}
+
+/* 2. Aparência geral e acessibilidade. */
+@layer base {
+  body {
+    background-color: rgb(var(--creme));
+    color: rgb(var(--tinta));
+    font-family: var(--fonte-texto);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 3px solid rgb(var(--telha));
+    outline-offset: 5px;
+  }
+
+  section, footer {
+    scroll-margin-top: 2rem;
+  }
+
+  dialog::backdrop {
+    background-color: rgb(0 0 0 / 65%);
+  }
+}
+
+/* 3. Classes de cores e fontes utilizadas no HTML.
+   A barra invertida permite usar / e : nos nomes das classes. */
+@layer utilities {
+  .font-display {
+    font-family: var(--fonte-titulo);
+  }
+
+  .bg-areia {
+    background-color: rgb(var(--areia));
+  }
+
+  .bg-creme {
+    background-color: rgb(var(--creme));
+  }
+
+  .bg-floresta {
+    background-color: rgb(var(--floresta));
+  }
+
+  .border-creme\/25 {
+    border-color: rgb(var(--creme) / 25%);
+  }
+
+  .border-creme\/50 {
+    border-color: rgb(var(--creme) / 50%);
+  }
+
+  .border-floresta {
+    border-color: rgb(var(--floresta));
+  }
+
+  .border-telha {
+    border-color: rgb(var(--telha));
+  }
+
+  .border-terra\/50 {
+    border-color: rgb(var(--terra) / 50%);
+  }
+
+  .border-terra\/60 {
+    border-color: rgb(var(--terra) / 60%);
+  }
+
+  .focus\:bg-creme:focus {
+    background-color: rgb(var(--creme));
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-areia:hover {
+      background-color: rgb(var(--areia));
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-floresta:hover {
+      background-color: rgb(var(--floresta));
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-tinta:hover {
+      background-color: rgb(var(--tinta));
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-creme:hover {
+      color: rgb(var(--creme));
+    }
+  }
+
+  .text-creme {
+    color: rgb(var(--creme));
+  }
+
+  .text-creme\/65 {
+    color: rgb(var(--creme) / 65%);
+  }
+
+  .text-floresta {
+    color: rgb(var(--floresta));
+  }
+
+  .text-telha {
+    color: rgb(var(--telha));
+  }
+
+  .text-tinta {
+    color: rgb(var(--tinta));
+  }
+
+  .text-tinta\/65 {
+    color: rgb(var(--tinta) / 65%);
+  }
+
+  .text-tinta\/75 {
+    color: rgb(var(--tinta) / 75%);
+  }
+
+  .text-tinta\/80 {
+    color: rgb(var(--tinta) / 80%);
+  }
+}
